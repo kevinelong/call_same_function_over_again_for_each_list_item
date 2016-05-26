@@ -1,0 +1,37 @@
+<body>
+Demo:<br>
+</body>
+
+<script>
+
+    function writeMeOneArgument(text) {
+        console.log(arguments);
+        document.body.innerHTML += text + "<br>"
+    }
+
+    function writeMeMoreThanOne(i, text) {
+        document.body.innerHTML += i + ":" + text + "<br>"
+    }
+
+    var list = [
+        "This",
+        "That",
+        "The other thing"
+    ];
+
+    //Canonical way
+    for (var i = 0; i < list.length; i++) {
+        var item = list[i];
+        writeMeOneArgument(item);
+    }
+
+    //New-fangled short way borrowed from "functional programming" languages. Only works with one argument or expect the
+    // three it passes: the_element, the_index, the_whole_list
+
+    list.map(writeMeOneArgument);
+
+    //Define and call
+    ["This", "That", "The other thing"].map(writeMeOneArgument);
+
+    //We can write a wrapper that calls
+</script>

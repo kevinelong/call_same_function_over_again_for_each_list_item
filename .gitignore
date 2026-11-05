@@ -3579,3 +3579,16 @@ application.windows64
 application.macosx
 ### Clojure template
 .gitignore
+
+# --- dependency stores, caches and build output (added 2026-11-05) ---
+.deno/
+.venv/
+virtualenv/
+site-packages/
+.pytest_cache/
+.mypy_cache/
+.next/
+.nuxt/
+.parcel-cache/
+Pods/
+.cache/
